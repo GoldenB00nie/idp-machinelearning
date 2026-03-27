@@ -62,6 +62,10 @@ def predict():
     # Retornar o resultado como JSON
     return jsonify(resultado)
 
-# Executar o aplicativo Flask
+@app.route('/inicio')
+def inicio():
+    return "Página inicial"
+
+# xecutar o aplicativo Flask
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
