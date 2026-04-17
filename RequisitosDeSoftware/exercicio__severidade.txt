@@ -1,0 +1,58 @@
+
+MÉTRICAS DE SOFTWARE – SEVERIDADE
+
+Contexto Geral do Sistema
+O sistema em estudo é uma plataforma corporativa denominada SIGECO (Sistema Integrado de Gestão e Comunicação Organizacional). Trata-se de uma solução utilizada por aproximadamente 4.500 usuários internos
+e 2.300 usuários externos, entre clientes, fornecedores e parceiros comerciais. O objetivo do SIGECO é integrar processos administrativos, operacionais e de atendimento, oferecendo uma visão centralizada
+de informações e automação de diversas rotinas da empresa.
+
+O sistema é composto por seis módulos principais: (1) Módulo de Autenticação e Identidade, (2) Módulo de Cadastro e Gerenciamento de Clientes, (3) Módulo de Processos Operacionais, (4) Módulo de Atendimento
+e Suporte, (5) Módulo de Relatórios e Indicadores, (6) Módulo de Integrações Externas. Cada módulo possui funcionalidades específicas e telas dedicadas, operando de maneira interdependente.
+
+Módulo 1 – Autenticação e Identidade
+Este módulo gerencia o acesso ao sistema e possui recursos como login, recuperação de senha, autenticação multifator e controle de permissões. O fluxo padrão inclui validação de credenciais e carregamento
+do perfil do usuário. Entretanto, alguns problemas frequentes têm sido relatados:
+• Lentidão no processo de login durante horários de pico (afetando cerca de 35% dos usuários ativos). O tempo médio de autenticação pode variar de 12 a 45 segundos.
+• Falhas ocasionais na autenticação multifator, especialmente quando o usuário tenta acessar via dispositivos móveis antigos.
+• Mensagens de erro inconsistentes ou genéricas, sem orientar adequadamente o usuário sobre a causa do problema.
+
+Módulo 2 – Cadastro e Gerenciamento de Clientes
+Este módulo centraliza o cadastro de clientes, edições, anexos, histórico e validações. Problemas mais comuns incluem:
+• Erro ao salvar formulários extensos contendo anexos acima de 10MB, afetando cerca de 18% dos usuários do setor comercial.
+• Campos que desaparecem em telas mobile quando a resolução do dispositivo é inferior a 720px.
+• Falhas de validação que não exibem corretamente o campo onde ocorreu o erro, dificultando diagnósticos.
+
+Módulo 3 – Processos Operacionais
+Responsável por fluxos como geração de pedidos, aprovação de operações e emissão de documentos internos. Os problemas identificados incluem:
+• Travamento da tela ao carregar dashboards com grande volume de dados. Acontece de 2 a 4 vezes por semana para aproximadamente 40% dos usuários operacionais.
+• Erros intermitentes ao gerar documentos em PDF, especialmente quando o volume de registros ultrapassa 5.000 itens.
+• Perda de informação temporária quando múltiplos usuários tentam editar simultaneamente o mesmo processo.
+
+Módulo 4 – Atendimento e Suporte
+Oferece abertura de chamados, comunicação com clientes, anexos e triagem. Problemas frequentes:
+• Erros na atualização de status do chamado quando anexos ultrapassam determinado tamanho.
+• Mensagens incorretas indicando conclusão do atendimento quando ainda há etapas pendentes.
+• Intermitência na sincronização entre o atendimento interno e o portal do cliente, ocorrendo aproximadamente 15 vezes por mês.
+
+Módulo 5 – Relatórios e Indicadores
+Permite gerar relatórios gerenciais, exportações em CSV, PDF e Excel, além de dashboards analíticos. Problemas relatados:
+• Exportação falha para alguns usuários específicos, sem padrão claro de comportamento.
+• Lentidão ao montar relatórios com filtros avançados.
+• Gráficos que não carregam completamente em navegadores mais antigos.
+
+Módulo 6 – Integrações Externas
+O sistema se conecta a APIs de parceiros, bancos de dados externos e plataformas de terceiros. Problemas comuns:
+• Falhas de comunicação com API externa durante períodos de alta demanda.
+• Dados inconsistentes quando há interrupção parcial na sincronização.
+• Alertas de erro pouco detalhados, dificultando o diagnóstico técnico.
+
+Ambientes de Execução
+O SIGECO opera em três ambientes: Desenvolvimento, Homologação e Produção. Entretanto, os problemas registrados ocorrem quase exclusivamente em Produção, devido ao alto volume de dados e usuários simultâneos.
+
+Frequência e Impacto dos Problemas
+Os problemas acima geram impacto significativo em termos de produtividade, retrabalho e insatisfação dos usuários. A severidade dos erros varia, mas muitos deles afetam diretamente atividades críticas da
+empresa, como a abertura de pedidos, atendimento ao cliente e relatórios gerenciais.
+
+
+Com base no texto acima,  analise os problemas descritos, interpretar os impactos operacionais e técnicos, identificar usuários afetados e a frequência de cada ocorrência. Em seguida, devem criar uma nova
+planilha classificando os erros com base em métricas de severidade.

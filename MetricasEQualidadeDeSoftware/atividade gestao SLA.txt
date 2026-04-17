@@ -1,0 +1,33 @@
+1.
+(24 * 30 - 6) / (24 * 30) = 714 / 720 =~ 0.992 = 99,2% de disponibilidade < 99.5%
+Disponibildidade do sistema: Descumprido
+
+2. Criticos
+- 4 falharam a responder em 1 hora, respondendo entre 1h30 a 2h
+- 5 falharam em ser resolvidos em até 4h, levando 5 a 8 horas para a resolucao
+Tempo de resposta a Incidentes críticos: Descumprido
+
+3. Medios
+- 5 ultrapassaram o tempo de resposta
+- 3 ultrapassaram o prazo para resolução
+Tempo de resposta a Incidentes Médios: Descumprido
+
+4. 16 / 20 = 0,8 = 80% < 90%
+Entregas de funcionalidades: Descumprido
+
+5. 96 / 120 = 0,8 = 80% satisfação < 85%
+Suporte ao cliente: Descumprido
+
+6. Disponibildidade do sistema: Descumprido
+Tempo de resposta a Incidentes:
+	Criticos: Descumprido
+	Medios: Descumprido
+	Baixos: Não há dados
+Entregas de funcionalidades: Descumprido
+Suporte ao cliente: Descumprido
+
+7. 
+Disponibilidade do sistema: Corrigir bugs do sistema que estão atrasando a disponibilidade do sistema
+Tempo de resposta a incidentes: Alocar mais equipe para resolução de incidentes
+Entregas de funcionalidades: Melhorar a organização das atividades e paralelismo definido nos sprints
+Suporte ao cliente: Analisar e corrigir as insatisfações apontadas nas respostas dos clientes
