@@ -1,0 +1,236 @@
+
+<style>
+  h2.sr-only { position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0); }
+  .algo-card { background:var(--color-background-primary); border:0.5px solid var(--color-border-tertiary); border-radius:var(--border-radius-lg); padding:1rem 1.25rem; margin-bottom:10px; }
+  .algo-card.winner { border:2px solid var(--color-border-info); }
+  .algo-name { font-size:15px;font-weight:500;color:var(--color-text-primary);margin:0 0 4px; }
+  .algo-tagline { font-size:13px;color:var(--color-text-secondary);margin:0 0 12px; }
+  .badge { display:inline-block;font-size:11px;font-weight:500;padding:3px 8px;border-radius:var(--border-radius-md);margin-right:5px;margin-bottom:5px; }
+  .b-blue  { background:#E6F1FB;color:#0C447C; }
+  .b-teal  { background:#E1F5EE;color:#085041; }
+  .b-amber { background:#FAEEDA;color:#633806; }
+  .b-red   { background:#FCEBEB;color:#791F1F; }
+  .b-purple{ background:#EEEDFE;color:#3C3489; }
+  .b-green { background:#EAF3DE;color:#27500A; }
+  .b-gray  { background:#F1EFE8;color:#444441; }
+  .b-winner{ background:#E6F1FB;color:#0C447C;font-size:12px;padding:4px 12px;border-radius:var(--border-radius-md);display:inline-block;margin-bottom:8px; }
+  .bar-row { display:flex;align-items:center;gap:8px;margin-bottom:6px; }
+  .bar-label { font-size:12px;color:var(--color-text-secondary);width:100px;flex-shrink:0; }
+  .bar-track { flex:1;height:6px;background:var(--color-background-secondary);border-radius:3px;overflow:hidden; }
+  .bar-fill  { height:100%;border-radius:3px; }
+  .mini-diagram { margin:10px 0 4px; }
+  .section-title { font-size:16px;font-weight:500;color:var(--color-text-primary);margin:2rem 0 .75rem; }
+  .verdict-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;margin-top:12px; }
+  .verdict-card { background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:10px 12px;text-align:center; }
+  .verdict-label { font-size:11px;color:var(--color-text-secondary);margin-bottom:4px; }
+  .verdict-val { font-size:14px;font-weight:500;color:var(--color-text-primary); }
+</style>
+
+<h2 class="sr-only">Comparativo de algoritmos de regressão para análise de qualidade do ar</h2>
+
+<p style="font-size:13px;color:var(--color-text-secondary);margin:1rem 0 1.5rem;">Clique em qualquer algoritmo para saber mais detalhes.</p>
+
+<!-- 1. Regressão Linear -->
+<div class="algo-card">
+  <div class="algo-name">Regressão Linear</div>
+  <div class="algo-tagline">Traça a linha reta que melhor se ajusta aos dados</div>
+  <svg width="100%" viewBox="0 0 300 80" style="display:block;margin-bottom:10px">
+    <circle cx="30" cy="58" r="3" fill="#7F77DD" opacity=".7"/>
+    <circle cx="60" cy="48" r="3" fill="#7F77DD" opacity=".7"/>
+    <circle cx="90" cy="52" r="3" fill="#7F77DD" opacity=".7"/>
+    <circle cx="120" cy="36" r="3" fill="#7F77DD" opacity=".7"/>
+    <circle cx="150" cy="38" r="3" fill="#7F77DD" opacity=".7"/>
+    <circle cx="180" cy="28" r="3" fill="#7F77DD" opacity=".7"/>
+    <circle cx="210" cy="22" r="3" fill="#7F77DD" opacity=".7"/>
+    <circle cx="240" cy="14" r="3" fill="#7F77DD" opacity=".7"/>
+    <line x1="20" y1="66" x2="260" y2="8" stroke="#534AB7" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="90" y1="52" x2="90" y2="43" stroke="#D85A30" stroke-width="1" stroke-dasharray="2 2"/>
+    <line x1="150" y1="38" x2="150" y2="29" stroke="#D85A30" stroke-width="1" stroke-dasharray="2 2"/>
+    <text x="270" y="12" style="font-size:11px;fill:var(--color-text-secondary)">ŷ=ax+b</text>
+  </svg>
+  <div>
+    <span class="badge b-green">muito rápido</span>
+    <span class="badge b-blue">interpretável</span>
+    <span class="badge b-amber">assume linearidade</span>
+    <span class="badge b-red">sensível a outliers</span>
+  </div>
+  <div style="margin-top:10px">
+    <div class="bar-row"><span class="bar-label">Precisão</span><div class="bar-track"><div class="bar-fill" style="width:35%;background:#7F77DD"></div></div></div>
+    <div class="bar-row"><span class="bar-label">Velocidade</span><div class="bar-track"><div class="bar-fill" style="width:98%;background:#1D9E75"></div></div></div>
+    <div class="bar-row"><span class="bar-label">Interpretabilidade</span><div class="bar-track"><div class="bar-fill" style="width:95%;background:#1D9E75"></div></div></div>
+    <div class="bar-row"><span class="bar-label">Lida c/ ruído</span><div class="bar-track"><div class="bar-fill" style="width:20%;background:#E24B4A"></div></div></div>
+  </div>
+  <button style="margin-top:10px;font-size:12px;" onclick="sendPrompt('Me mostra como implementar Regressão Linear para o dataset de qualidade do ar em Python')">Ver implementação ↗</button>
+</div>
+
+<!-- 2. Random Forest -->
+<div class="algo-card">
+  <div class="algo-name">Random Forest Regressor</div>
+  <div class="algo-tagline">Vota entre muitas árvores de decisão — cada uma treinada em dados e features aleatórios</div>
+  <svg width="100%" viewBox="0 0 300 80" style="display:block;margin-bottom:10px">
+    <g opacity=".5">
+      <line x1="50" y1="12" x2="30" y2="38" stroke="#1D9E75" stroke-width="1"/><line x1="50" y1="12" x2="70" y2="38" stroke="#1D9E75" stroke-width="1"/>
+      <rect x="38" y="6" width="24" height="14" rx="3" fill="#9FE1CB" stroke="#1D9E75" stroke-width="0.5"/>
+      <text x="50" y="16" text-anchor="middle" style="font-size:9px;fill:#085041">T1</text>
+      <rect x="18" y="38" width="24" height="14" rx="3" fill="#9FE1CB" stroke="#1D9E75" stroke-width="0.5"/>
+      <rect x="58" y="38" width="24" height="14" rx="3" fill="#9FE1CB" stroke="#1D9E75" stroke-width="0.5"/>
+    </g>
+    <g opacity=".7" transform="translate(90,0)">
+      <line x1="50" y1="12" x2="30" y2="38" stroke="#1D9E75" stroke-width="1"/><line x1="50" y1="12" x2="70" y2="38" stroke="#1D9E75" stroke-width="1"/>
+      <rect x="38" y="6" width="24" height="14" rx="3" fill="#5DCAA5" stroke="#1D9E75" stroke-width="0.5"/>
+      <text x="50" y="16" text-anchor="middle" style="font-size:9px;fill:#085041">T2</text>
+      <rect x="18" y="38" width="24" height="14" rx="3" fill="#5DCAA5" stroke="#1D9E75" stroke-width="0.5"/>
+      <rect x="58" y="38" width="24" height="14" rx="3" fill="#5DCAA5" stroke="#1D9E75" stroke-width="0.5"/>
+    </g>
+    <g opacity=".9" transform="translate(180,0)">
+      <line x1="50" y1="12" x2="30" y2="38" stroke="#1D9E75" stroke-width="1"/><line x1="50" y1="12" x2="70" y2="38" stroke="#1D9E75" stroke-width="1"/>
+      <rect x="38" y="6" width="24" height="14" rx="3" fill="#1D9E75" stroke="#0F6E56" stroke-width="0.5"/>
+      <text x="50" y="16" text-anchor="middle" style="font-size:9px;fill:#E1F5EE">T3</text>
+      <rect x="18" y="38" width="24" height="14" rx="3" fill="#1D9E75" stroke="#0F6E56" stroke-width="0.5"/>
+      <rect x="58" y="38" width="24" height="14" rx="3" fill="#1D9E75" stroke="#0F6E56" stroke-width="0.5"/>
+    </g>
+    <text x="150" y="72" text-anchor="middle" style="font-size:10px;fill:var(--color-text-secondary)">média das previsões → resultado final</text>
+  </svg>
+  <div>
+    <span class="badge b-green">robusto a outliers</span>
+    <span class="badge b-teal">feature importance</span>
+    <span class="badge b-blue">sem necessidade de escala</span>
+    <span class="badge b-gray">treinamento lento</span>
+  </div>
+  <div style="margin-top:10px">
+    <div class="bar-row"><span class="bar-label">Precisão</span><div class="bar-track"><div class="bar-fill" style="width:82%;background:#7F77DD"></div></div></div>
+    <div class="bar-row"><span class="bar-label">Velocidade</span><div class="bar-track"><div class="bar-fill" style="width:55%;background:#1D9E75"></div></div></div>
+    <div class="bar-row"><span class="bar-label">Interpretabilidade</span><div class="bar-track"><div class="bar-fill" style="width:50%;background:#1D9E75"></div></div></div>
+    <div class="bar-row"><span class="bar-label">Lida c/ ruído</span><div class="bar-track"><div class="bar-fill" style="width:80%;background:#1D9E75"></div></div></div>
+  </div>
+  <button style="margin-top:10px;font-size:12px;" onclick="sendPrompt('Me mostra como usar Random Forest Regressor no dataset de qualidade do ar com feature importance')">Ver implementação ↗</button>
+</div>
+
+<!-- 3. Extra Trees -->
+<div class="algo-card">
+  <div class="algo-name">Extra Trees Regressor</div>
+  <div class="algo-tagline">Como Random Forest, mas os cortes das árvores são completamente aleatórios — mais rápido ainda</div>
+  <div>
+    <span class="badge b-green">muito rápido de treinar</span>
+    <span class="badge b-teal">menos overfitting</span>
+    <span class="badge b-blue">sem necessidade de escala</span>
+    <span class="badge b-amber">menos preciso que RF</span>
+  </div>
+  <div style="margin-top:10px">
+    <div class="bar-row"><span class="bar-label">Precisão</span><div class="bar-track"><div class="bar-fill" style="width:78%;background:#7F77DD"></div></div></div>
+    <div class="bar-row"><span class="bar-label">Velocidade</span><div class="bar-track"><div class="bar-fill" style="width:75%;background:#1D9E75"></div></div></div>
+    <div class="bar-row"><span class="bar-label">Interpretabilidade</span><div class="bar-track"><div class="bar-fill" style="width:50%;background:#1D9E75"></div></div></div>
+    <div class="bar-row"><span class="bar-label">Lida c/ ruído</span><div class="bar-track"><div class="bar-fill" style="width:75%;background:#1D9E75"></div></div></div>
+  </div>
+  <p style="font-size:12px;color:var(--color-text-secondary);margin:8px 0 0">Diferença do RF: em vez de escolher o melhor corte entre as features, escolhe cortes aleatoriamente. Isso reduz variância mas pode aumentar bias levemente.</p>
+</div>
+
+<!-- 4. Gradient Boosting -->
+<div class="algo-card">
+  <div class="algo-name">Gradient Boosting Regressor</div>
+  <div class="algo-tagline">Constrói árvores em sequência — cada nova corrige o erro da anterior</div>
+  <svg width="100%" viewBox="0 0 300 60" style="display:block;margin-bottom:10px">
+    <rect x="10" y="18" width="50" height="28" rx="5" fill="#CECBF6" stroke="#534AB7" stroke-width="0.5"/>
+    <text x="35" y="34" text-anchor="middle" style="font-size:10px;fill:#26215C">Árvore 1</text>
+    <line x1="60" y1="32" x2="80" y2="32" stroke="var(--color-text-secondary)" stroke-width="1" marker-end="url(#arr2)"/>
+    <rect x="80" y="18" width="50" height="28" rx="5" fill="#AFA9EC" stroke="#534AB7" stroke-width="0.5"/>
+    <text x="105" y="34" text-anchor="middle" style="font-size:10px;fill:#26215C">+ erro 1</text>
+    <line x1="130" y1="32" x2="150" y2="32" stroke="var(--color-text-secondary)" stroke-width="1" marker-end="url(#arr2)"/>
+    <rect x="150" y="18" width="50" height="28" rx="5" fill="#7F77DD" stroke="#534AB7" stroke-width="0.5"/>
+    <text x="175" y="34" text-anchor="middle" style="font-size:10px;fill:#EEEDFE">+ erro 2</text>
+    <line x1="200" y1="32" x2="218" y2="32" stroke="var(--color-text-secondary)" stroke-width="1" marker-end="url(#arr2)"/>
+    <text x="230" y="36" style="font-size:11px;fill:var(--color-text-secondary)">→ ŷ</text>
+    <defs><marker id="arr2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="var(--color-text-secondary)" stroke-width="1.5"/></marker></defs>
+  </svg>
+  <div>
+    <span class="badge b-purple">alta precisão</span>
+    <span class="badge b-amber">lento de treinar</span>
+    <span class="badge b-blue">sensível a hiperparâmetros</span>
+    <span class="badge b-green">XGBoost / LightGBM são variantes</span>
+  </div>
+  <div style="margin-top:10px">
+    <div class="bar-row"><span class="bar-label">Precisão</span><div class="bar-track"><div class="bar-fill" style="width:90%;background:#7F77DD"></div></div></div>
+    <div class="bar-row"><span class="bar-label">Velocidade</span><div class="bar-track"><div class="bar-fill" style="width:35%;background:#E24B4A"></div></div></div>
+    <div class="bar-row"><span class="bar-label">Interpretabilidade</span><div class="bar-track"><div class="bar-fill" style="width:40%;background:#EF9F27"></div></div></div>
+    <div class="bar-row"><span class="bar-label">Lida c/ ruído</span><div class="bar-track"><div class="bar-fill" style="width:70%;background:#1D9E75"></div></div></div>
+  </div>
+  <button style="margin-top:10px;font-size:12px;" onclick="sendPrompt('Qual a diferença entre Gradient Boosting, XGBoost e LightGBM?')">GB vs XGBoost vs LightGBM ↗</button>
+</div>
+
+<!-- 5. KNN -->
+<div class="algo-card">
+  <div class="algo-name">K-Nearest Neighbors (KNN)</div>
+  <div class="algo-tagline">Prevê com base na média dos K vizinhos mais próximos no espaço de features</div>
+  <svg width="100%" viewBox="0 0 300 72" style="display:block;margin-bottom:10px">
+    <circle cx="80" cy="36" r="22" fill="none" stroke="#378ADD" stroke-width="1" stroke-dasharray="4 3" opacity=".6"/>
+    <circle cx="60" cy="28" r="4" fill="#5DCAA5"/><circle cx="78" cy="22" r="4" fill="#5DCAA5"/><circle cx="95" cy="30" r="4" fill="#5DCAA5"/>
+    <circle cx="72" cy="50" r="4" fill="#D85A30" opacity=".4"/><circle cx="115" cy="44" r="4" fill="#D85A30" opacity=".4"/>
+    <circle cx="80" cy="36" r="5" fill="#378ADD" stroke="#185FA5" stroke-width="1"/>
+    <text x="87" y="54" style="font-size:10px;fill:var(--color-text-secondary)">query</text>
+    <text x="140" y="20" style="font-size:10px;fill:var(--color-text-secondary)">K=3 vizinhos</text>
+    <text x="140" y="34" style="font-size:10px;fill:#0C447C">média(v1,v2,v3)</text>
+    <text x="140" y="48" style="font-size:10px;fill:var(--color-text-secondary)">→ previsão</text>
+  </svg>
+  <div>
+    <span class="badge b-blue">simples de entender</span>
+    <span class="badge b-red">lento na inferência</span>
+    <span class="badge b-amber">precisa de normalização</span>
+    <span class="badge b-red">ruim em alta dimensão</span>
+  </div>
+  <div style="margin-top:10px">
+    <div class="bar-row"><span class="bar-label">Precisão</span><div class="bar-track"><div class="bar-fill" style="width:55%;background:#7F77DD"></div></div></div>
+    <div class="bar-row"><span class="bar-label">Velocidade</span><div class="bar-track"><div class="bar-fill" style="width:25%;background:#E24B4A"></div></div></div>
+    <div class="bar-row"><span class="bar-label">Interpretabilidade</span><div class="bar-track"><div class="bar-fill" style="width:65%;background:#1D9E75"></div></div></div>
+    <div class="bar-row"><span class="bar-label">Lida c/ ruído</span><div class="bar-track"><div class="bar-fill" style="width:40%;background:#EF9F27"></div></div></div>
+  </div>
+  <p style="font-size:12px;color:var(--color-text-secondary);margin:8px 0 0">Com 13 features como no dataset de qualidade do ar, KNN começa a sofrer com a "maldição da dimensionalidade" — distâncias perdem significado.</p>
+</div>
+
+<!-- 6. SVM/SVR -->
+<div class="algo-card">
+  <div class="algo-name">Support Vector Machine (SVR)</div>
+  <div class="algo-tagline">Encontra o "tubo" de largura ε que contém a maioria dos pontos, ignorando outliers fora do tubo</div>
+  <svg width="100%" viewBox="0 0 300 80" style="display:block;margin-bottom:10px">
+    <line x1="20" y1="62" x2="260" y2="14" stroke="#534AB7" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="20" y1="50" x2="260" y2="2" stroke="#7F77DD" stroke-width="0.8" stroke-dasharray="4 3"/>
+    <line x1="20" y1="74" x2="260" y2="26" stroke="#7F77DD" stroke-width="0.8" stroke-dasharray="4 3"/>
+    <rect x="20" y="14" width="240" height="48" fill="#7F77DD" opacity=".07"/>
+    <circle cx="50" cy="56" r="3" fill="#1D9E75" opacity=".8"/>
+    <circle cx="90" cy="44" r="3" fill="#1D9E75" opacity=".8"/>
+    <circle cx="130" cy="38" r="3" fill="#1D9E75" opacity=".8"/>
+    <circle cx="170" cy="30" r="3" fill="#1D9E75" opacity=".8"/>
+    <circle cx="210" cy="20" r="3" fill="#1D9E75" opacity=".8"/>
+    <circle cx="70" cy="70" r="3" fill="#D85A30" opacity=".6"/>
+    <text x="270" y="40" style="font-size:10px;fill:var(--color-text-secondary)">ε</text>
+  </svg>
+  <div>
+    <span class="badge b-purple">funciona bem com poucos dados</span>
+    <span class="badge b-amber">precisa de normalização</span>
+    <span class="badge b-red">muito lento em datasets grandes</span>
+    <span class="badge b-blue">kernel trick para não-linearidade</span>
+  </div>
+  <div style="margin-top:10px">
+    <div class="bar-row"><span class="bar-label">Precisão</span><div class="bar-track"><div class="bar-fill" style="width:72%;background:#7F77DD"></div></div></div>
+    <div class="bar-row"><span class="bar-label">Velocidade</span><div class="bar-track"><div class="bar-fill" style="width:18%;background:#E24B4A"></div></div></div>
+    <div class="bar-row"><span class="bar-label">Interpretabilidade</span><div class="bar-track"><div class="bar-fill" style="width:20%;background:#E24B4A"></div></div></div>
+    <div class="bar-row"><span class="bar-label">Lida c/ ruído</span><div class="bar-track"><div class="bar-fill" style="width:65%;background:#1D9E75"></div></div></div>
+  </div>
+  <button style="margin-top:10px;font-size:12px;" onclick="sendPrompt('O que é o kernel trick no SVR e quando usar kernel RBF vs linear?')">Entender kernel trick ↗</button>
+</div>
+
+<!-- VEREDICTO -->
+<div style="margin-top:2rem">
+  <div class="section-title">Melhor para o dataset de qualidade do ar</div>
+  <div class="algo-card winner">
+    <div class="b-winner">Recomendado</div>
+    <div class="algo-name">Gradient Boosting / Random Forest</div>
+    <div class="algo-tagline">Combinam alta precisão, robustez a ruído e feature importance — ideal para séries ambientais</div>
+    <div class="verdict-grid">
+      <div class="verdict-card"><div class="verdict-label">Relações</div><div class="verdict-val">Não-lineares</div></div>
+      <div class="verdict-card"><div class="verdict-label">Outliers</div><div class="verdict-val">Frequentes</div></div>
+      <div class="verdict-card"><div class="verdict-label">Features</div><div class="verdict-val">13 variáveis</div></div>
+      <div class="verdict-card"><div class="verdict-label">Interpretação</div><div class="verdict-val">Feature importance</div></div>
+    </div>
+    <button style="margin-top:12px;font-size:12px;" onclick="sendPrompt('Me mostra um pipeline completo comparando Random Forest e Gradient Boosting no dataset de qualidade do ar, com cross-validation e métricas R², MAE e RMSE')">Ver pipeline completo com cross-validation ↗</button>
+  </div>
+</div>
