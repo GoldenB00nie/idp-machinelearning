@@ -344,4 +344,16 @@ A tarefa será avaliada considerando a qualidade geral do fluxo desenvolvido nos
 - interpretação técnica das conclusões;
 - reprodutibilidade dos notebooks.
 
+A nota da atividade será composta por quatro partes, totalizando **10,0 pontos**:
+
+| Item avaliado | Pontuação |
+|---|---:|
+| Notebook 1 — Classificação | 2,5 pontos |
+| Notebook 2 — Regressão | 2,5 pontos |
+| Notebook 3 — Clusterização | 2,5 pontos |
+| Apresentação em sala | 2,5 pontos |
+| **Total** | **10,0 pontos** |
+
 A nota será atribuída de forma global, considerando a consistência da solução nos três tipos de problema. A tarefa não consiste apenas em executar algoritmos prontos. O aluno deve demonstrar domínio do fluxo completo de aprendizado de máquina, resolvendo um problema de cada tipo e apresentando um dos problemas desenvolvidos em sala de aula.
+
+**Boa Sorte!**
