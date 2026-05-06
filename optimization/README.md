@@ -108,7 +108,6 @@ Também serão aceitos datasets obtidos em fontes públicas, tais como:
 | UCI Machine Learning Repository | <https://archive.ics.uci.edu/datasets> | Repositório acadêmico tradicional de datasets para aprendizado de máquina, incluindo bases clássicas como Iris, Wine Quality, Bank Marketing, Adult, Student Performance e Online Retail. |
 | Base dos Dados | <https://basedosdados.org/> | Plataforma brasileira de dados públicos tratados, com acesso a dados para análise via SQL, Python ou R. É útil especialmente para problemas com contexto nacional, políticas públicas, economia, educação, saúde, segurança, trabalho e dados governamentais. |
 | Portal Brasileiro de Dados Abertos | <https://dados.gov.br/> | Portal oficial de dados abertos do governo brasileiro, útil para projetos com bases públicas reais. |
-| Brasil.IO | <https://brasil.io/datasets/> | Plataforma brasileira com datasets públicos organizados, incluindo bases eleitorais, empresas, gastos públicos, entre outras. |
 
 ## 4. Fluxo Obrigatório de Cada Notebook
 
