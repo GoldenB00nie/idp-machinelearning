@@ -58,12 +58,12 @@ O aluno poderá utilizar os datasets disponíveis no repositório da disciplina 
 
 | Dataset | Arquivo sugerido | Descrição | Desafio |
 |---|---|---|---|
-| Iris | `iris.csv` | Medidas de flores de três espécies diferentes | Prever a espécie da flor |
-| Vote | `vote.csv` | Votos de congressistas em pautas legislativas | Prever o partido político |
-| Diabetes | `diabetes.csv` | Dados clínicos de pacientes | Prever ocorrência de diabetes |
-| Ionosphere | `ionosphere.csv` | Sinais de radar classificados como bons ou ruins | Classificar o sinal de radar |
-| Segment | `segment-test.csv` | Atributos extraídos de segmentos de imagem | Classificar o tipo de segmento |
-| Bank | `bank-data.csv` | Perfil socioeconômico de clientes bancários | Prever adesão a produto financeiro |
+| [Iris](https://raw.githubusercontent.com/klaytoncastro/idp-machinelearning/refs/heads/main/datasets/iris.csv) | `iris.csv` | Medidas de flores de três espécies diferentes | Prever a espécie da flor |
+| [Vote](https://raw.githubusercontent.com/klaytoncastro/idp-machinelearning/refs/heads/main/datasets/vote.csv) | `vote.csv` | Votos de congressistas em pautas legislativas | Prever o partido político |
+| [Diabetes](https://raw.githubusercontent.com/klaytoncastro/idp-machinelearning/refs/heads/main/datasets/diabetes.csv) | `diabetes.csv` | Dados clínicos de pacientes | Prever ocorrência de diabetes |
+| [Ionosphere](https://raw.githubusercontent.com/klaytoncastro/idp-machinelearning/refs/heads/main/datasets/ionosphere.csv) | `ionosphere.csv` | Sinais de radar classificados como bons ou ruins | Classificar o sinal de radar |
+| [Segment](https://raw.githubusercontent.com/klaytoncastro/idp-machinelearning/refs/heads/main/datasets/segment-test.csv) | `segment-test.csv` | Atributos extraídos de segmentos de imagem | Classificar o tipo de segmento |
+| [Bank](https://raw.githubusercontent.com/klaytoncastro/idp-machinelearning/refs/heads/main/datasets/bank-data.csv) | `bank-data.csv` | Perfil socioeconômico de clientes bancários | Prever adesão a produto financeiro |
 
 ### 3.2. Datasets para Regressão
 
