@@ -71,8 +71,8 @@ O aluno poderá utilizar os datasets disponíveis no repositório da disciplina 
 |---|---|---|---|
 | [CPU w/ Vendor](https://raw.githubusercontent.com/klaytoncastro/idp-machinelearning/refs/heads/main/datasets/cpu.with.vendor.csv) | `cpu.with.vendor.csv` | Características técnicas de CPUs | Prever desempenho da CPU |
 | [AirQuality](https://raw.githubusercontent.com/klaytoncastro/idp-machinelearning/refs/heads/main/datasets/AirQualityUCI.csv) | `AirQualityUCI.csv` | Leituras ambientais e sensores químicos | Prever concentração de poluentes ou variável ambiental |
-| [Ames Housing](https://raw.githubusercontent.com/klaytoncastro/idp-machinelearning/refs/heads/main/datasets/) | [Kaggle](https://www.kaggle.com/datasets/shashanknecrothapa/ames-housing-dataset) | Dados de imóveis com aproximadamente 79 atributos | Prever preço de venda |
-| [Energy Efficiency](https://raw.githubusercontent.com/klaytoncastro/idp-machinelearning/refs/heads/main/datasets/) | [UCI](https://archive.ics.uci.edu/ml/datasets/energy+efficiency) | Dados de eficiência energética de edifícios | Prever carga de aquecimento ou resfriamento |
+| Ames Housing | [Kaggle](https://www.kaggle.com/datasets/shashanknecrothapa/ames-housing-dataset) | Dados de imóveis com aproximadamente 79 atributos | Prever preço de venda |
+| Energy Efficiency | [UCI](https://archive.ics.uci.edu/ml/datasets/energy+efficiency) | Dados de eficiência energética de edifícios | Prever carga de aquecimento ou resfriamento |
 
 ### 3.3. Datasets para Clusterização
 
