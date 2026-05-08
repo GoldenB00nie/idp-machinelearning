@@ -52,25 +52,25 @@ Exemplos com vários algoritmos e implementação das técnicas de otimização 
 https://github.com/klaytoncastro/idp-machinelearning/tree/main/optimization
 ```
 
-O aluno poderá utilizar os datasets disponíveis no repositório da disciplina ou escolher outros datasets. A entrega deve conter análise própria, justificativas e interpretação dos resultados.
+O aluno poderá utilizar os datasets disponíveis no repositório da disciplina ou escolher outros datasets públicos, desde que a escolha seja tecnicamente justificada e compatível com o tipo de problema desenvolvido. A entrega deve conter análise própria, justificativas e interpretação dos resultados. O simples uso de notebook pronto, código copiado ou análise superficial do dataset não será considerado suficiente. 
 
 ### 3.1. Datasets para Classificação
 
 | Dataset | Arquivo sugerido | Descrição | Desafio |
 |---|---|---|---|
-| Iris | `iris.csv` | Medidas de flores de três espécies diferentes | Prever a espécie da flor |
-| Vote | `vote.csv` | Votos de congressistas em pautas legislativas | Prever o partido político |
-| Diabetes | `diabetes.csv` | Dados clínicos de pacientes | Prever ocorrência de diabetes |
-| Ionosphere | `ionosphere.csv` | Sinais de radar classificados como bons ou ruins | Classificar o sinal de radar |
-| Segment | `segment-test.csv` | Atributos extraídos de segmentos de imagem | Classificar o tipo de segmento |
-| Bank | `bank-data.csv` | Perfil socioeconômico de clientes bancários | Prever adesão a produto financeiro |
+| [Iris](https://raw.githubusercontent.com/klaytoncastro/idp-machinelearning/refs/heads/main/datasets/iris.csv) | `iris.csv` | Medidas de flores de três espécies diferentes | Prever a espécie da flor |
+| [Vote](https://raw.githubusercontent.com/klaytoncastro/idp-machinelearning/refs/heads/main/datasets/vote.csv) | `vote.csv` | Votos de congressistas em pautas legislativas | Prever o partido político |
+| [Diabetes](https://raw.githubusercontent.com/klaytoncastro/idp-machinelearning/refs/heads/main/datasets/diabetes.csv) | `diabetes.csv` | Dados clínicos de pacientes | Prever ocorrência de diabetes |
+| [Ionosphere](https://raw.githubusercontent.com/klaytoncastro/idp-machinelearning/refs/heads/main/datasets/ionosphere.csv) | `ionosphere.csv` | Sinais de radar classificados como bons ou ruins | Classificar o sinal de radar |
+| [Segment](https://raw.githubusercontent.com/klaytoncastro/idp-machinelearning/refs/heads/main/datasets/segment-test.csv) | `segment-test.csv` | Atributos extraídos de segmentos de imagem | Classificar o tipo de segmento |
+| [Bank](https://raw.githubusercontent.com/klaytoncastro/idp-machinelearning/refs/heads/main/datasets/bank-data.csv) | `bank-data.csv` | Perfil socioeconômico de clientes bancários | Prever adesão a produto financeiro |
 
 ### 3.2. Datasets para Regressão
 
 | Dataset | Arquivo sugerido | Descrição | Desafio |
 |---|---|---|---|
-| CPU with Vendor | `cpu.with.vendor.csv` | Características técnicas de CPUs | Prever desempenho da CPU |
-| AirQuality | `AirQualityUCI.csv` | Leituras ambientais e sensores químicos | Prever concentração de poluentes ou variável ambiental |
+| [CPU w/ Vendor](https://raw.githubusercontent.com/klaytoncastro/idp-machinelearning/refs/heads/main/datasets/cpu.with.vendor.csv) | `cpu.with.vendor.csv` | Características técnicas de CPUs | Prever desempenho da CPU |
+| [AirQuality](https://raw.githubusercontent.com/klaytoncastro/idp-machinelearning/refs/heads/main/datasets/AirQualityUCI.csv) | `AirQualityUCI.csv` | Leituras ambientais e sensores químicos | Prever concentração de poluentes ou variável ambiental |
 | Ames Housing | [Kaggle](https://www.kaggle.com/datasets/shashanknecrothapa/ames-housing-dataset) | Dados de imóveis com aproximadamente 79 atributos | Prever preço de venda |
 | Energy Efficiency | [UCI](https://archive.ics.uci.edu/ml/datasets/energy+efficiency) | Dados de eficiência energética de edifícios | Prever carga de aquecimento ou resfriamento |
 
@@ -78,9 +78,36 @@ O aluno poderá utilizar os datasets disponíveis no repositório da disciplina 
 
 | Dataset | Arquivo sugerido | Descrição | Desafio |
 |---|---|---|---|
-| Segment | `segment-test.csv` | Atributos visuais de segmentos de imagem | Agrupar segmentos semelhantes |
-| Telecom | `telecom-customer-data.csv` | Perfil e consumo de clientes de telecomunicações | Agrupar clientes por perfil de consumo |
-| Bank | `bank-data.csv` | Perfil socioeconômico e bancário de clientes | Segmentar clientes por perfil |
+| [Segment](https://raw.githubusercontent.com/klaytoncastro/idp-machinelearning/refs/heads/main/datasets/segment-test.csv) | `segment-test.csv` | Atributos visuais de segmentos de imagem | Agrupar segmentos semelhantes |
+| [Telecom](https://raw.githubusercontent.com/klaytoncastro/idp-machinelearning/refs/heads/main/datasets/telecom-customer-data.csv) | `telecom-customer-data.csv` | Perfil e consumo de clientes de telecomunicações | Agrupar clientes por perfil de consumo |
+| [Bank](https://raw.githubusercontent.com/klaytoncastro/idp-machinelearning/refs/heads/main/datasets/bank-data.csv) | `bank-data.csv` | Perfil socioeconômico e bancário de clientes | Segmentar clientes por perfil |
+
+### 3.4 Sugestão de outras fontes para obter datasets aplicáveis aos desafios
+
+Além dos datasets sugeridos acima, também serão aceitos datasets institucionais próprios, datasets públicos ou bases oriundas de problemas reais vivenciados pelo aluno em sua empresa, estágio, órgão público, projeto profissional ou contexto organizacional.
+
+O aluno poderá utilizar um problema real de classificação, regressão ou clusterização, desde que o dataset seja compatível com o tipo de problema escolhido e permita a aplicação completa do fluxo de aprendizado de máquina proposto nesta tarefa.
+
+São exemplos de problemas aceitos:
+
+- previsão de inadimplência, evasão, churn ou adesão a serviços;
+- classificação de clientes, documentos, solicitações, chamados ou eventos;
+- previsão de preços, custos, consumo, demanda, tempo de atendimento ou desempenho;
+- agrupamento de clientes, usuários, produtos, ocorrências, municípios ou unidades organizacionais;
+- análise de dados operacionais de empresas, órgãos públicos, projetos profissionais ou estágios;
+- uso de bases institucionais anonimizadas ou disponibilizadas para fins acadêmicos.
+
+Quando utilizar dados de empresa, estágio, órgão público ou qualquer contexto institucional, o aluno deverá garantir que não haja exposição de informações sigilosas, sensíveis, pessoais, estratégicas ou protegidas por norma interna. Os dados devem ser anonimizados se isso for necessário.
+
+Também serão aceitos datasets obtidos em fontes públicas, tais como:
+
+
+| Fonte | Endereço | Observação |
+|---|---|---|
+| Kaggle | <https://www.kaggle.com/datasets> | Plataforma ampla com datasets de classificação, regressão, séries temporais, visão computacional, negócios e saúde. O Kaggle informa disponibilizar centenas de milhares de datasets abertos para pesquisa, treinamento de modelos e análise. |
+| UCI Machine Learning Repository | <https://archive.ics.uci.edu/datasets> | Repositório acadêmico tradicional de datasets para aprendizado de máquina, incluindo bases clássicas como Iris, Wine Quality, Bank Marketing, Adult, Student Performance e Online Retail. |
+| Base dos Dados | <https://basedosdados.org/> | Plataforma brasileira de dados públicos tratados, com acesso a dados para análise via SQL, Python ou R. É útil especialmente para problemas com contexto nacional, políticas públicas, economia, educação, saúde, segurança, trabalho e dados governamentais. |
+| Portal Brasileiro de Dados Abertos | <https://dados.gov.br/> | Portal oficial de dados abertos do governo brasileiro, útil para projetos com bases públicas reais. |
 
 ## 4. Fluxo Obrigatório de Cada Notebook
 
@@ -316,16 +343,16 @@ A tarefa será avaliada considerando a qualidade geral do fluxo desenvolvido nos
 - interpretação técnica das conclusões;
 - reprodutibilidade dos notebooks.
 
-A nota será atribuída de forma global, considerando a consistência da solução nos três tipos de problema. A tarefa não consiste apenas em executar algoritmos prontos. O aluno deve demonstrar domínio do fluxo completo de aprendizado de máquina:
+A nota da atividade será composta por quatro partes, totalizando **10,0 pontos**:
 
-```text
-→ problema
-→ dataset
-→ análise exploratória
-→ pré-processamento
-→ modelo inicial
-→ avaliação
-→ otimização
-→ comparação
-→ conclusão
-```
+| Item avaliado | Pontuação |
+|---|---:|
+| Notebook 1 — Classificação | 2,5 pontos |
+| Notebook 2 — Regressão | 2,5 pontos |
+| Notebook 3 — Clusterização | 2,5 pontos |
+| Apresentação em sala | 2,5 pontos |
+| **Total** | **10,0 pontos** |
+
+A nota será atribuída de forma global, considerando a consistência da solução nos três tipos de problema. A tarefa não consiste apenas em executar algoritmos prontos. O aluno deve demonstrar domínio do fluxo completo de aprendizado de máquina, resolvendo um problema de cada tipo e apresentando um dos problemas desenvolvidos em sala de aula.
+
+**Boa Sorte!**
